@@ -3,14 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <Authors>Short Cord, Melissa</Authors>
-    <Company></Company>
     <Product>OpenMelissa</Product>
     <Description>.NET Core 2.1 Bindings for Melissa Objects</Description>
     <RootNamespace>OpenMelissa</RootNamespace>
     <AssemblyName>OpenMelissa</AssemblyName>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>E:\clean.net\CleanCore\CleanCore.xml</DocumentationFile>
-  </PropertyGroup>
+  
 </Project>
