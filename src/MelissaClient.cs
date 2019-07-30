@@ -5,6 +5,8 @@ namespace OpenMelissa
 {
     public class MelissaClient : IMelissaClient
     {
+        #region Object LazyLoaders/Getters
+
         AddressObject _addressObject;
         ParseObject _parseObject;
         EmailObject _emailObject;
@@ -42,9 +44,9 @@ namespace OpenMelissa
             }
         }
 
-        readonly MelissaClientConfig Config;
+        #endregion
 
-        protected MelissaClient() { }
+        readonly MelissaClientConfig Config;
 
         public MelissaClient(MelissaClientConfig config)
         {
@@ -52,13 +54,11 @@ namespace OpenMelissa
         }
 
         /// <summary>
-        /// Disposes of the MD Objects then receates them.
+        /// Disposes of the MD Objects.
+        /// <para>MD Objects will be recreated on use.</para>
         /// </summary>
-        /// <param name="config"></param>
-        protected void ResetObjects(MelissaClientConfig config)
-        {
-            Dispose();
-        }
+        public void ResetObjects()
+            => Dispose();
 
         /// <summary>
         /// Validate an Address.

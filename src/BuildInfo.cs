@@ -1,5 +1,8 @@
 ﻿namespace OpenMelissa
 {
+    /// <summary>
+    /// Information regarding Build numbers and dates for datafiles.
+    /// </summary>
     public struct BuildInfo
     {
         /// <summary>
@@ -9,9 +12,9 @@
         /// <summary>
         /// The date that the loaded datafiles were built.
         /// </summary>
-        public string DataBaseFileDate { get; internal set; }
+        public string DatabaseFileDate { get; internal set; }
         /// <summary>
-        /// The date that the loaded datafiles will exipre, this does not account for the license lenght.
+        /// The date that the loaded datafiles will exipre, this does not account for the license length.
         /// </summary>
         public string DatabaseExpirationDate { get; internal set; }
         /// <summary>
@@ -21,7 +24,7 @@
 
         public override string ToString()
         {
-            return $"Build Number: {BuildNumber} | Built: {DataBaseFileDate}; Expiration: {DatabaseExpirationDate} | RBDI Date {RBDIDatabaseDate}";
+            return $"Build Number: {BuildNumber} | Built: {DatabaseFileDate}; Expiration: {DatabaseExpirationDate} | RBDI Date {RBDIDatabaseDate}";
         }
     }
 }

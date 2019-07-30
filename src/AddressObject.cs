@@ -89,7 +89,7 @@ namespace OpenMelissa
             Version = new BuildInfo
             {
                 BuildNumber = AddressObj.GetBuildNumber(),
-                DataBaseFileDate = AddressObj.GetDatabaseDate(),
+                DatabaseFileDate = AddressObj.GetDatabaseDate(),
                 DatabaseExpirationDate = AddressObj.GetExpirationDate(),
 
                 // only get RBDI if its enabled

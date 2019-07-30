@@ -11,6 +11,9 @@ namespace OpenMelissa
         readonly Internal.IMDEmail EmailObj;
         readonly MelissaClientConfig Config;
 
+        /// <summary>
+        /// <see cref="BuildInfo"/> for the Email Object
+        /// </summary>
         public BuildInfo Version { get; internal set; }
 
         internal EmailObject(MelissaClientConfig config)
@@ -56,11 +59,14 @@ namespace OpenMelissa
             Version = new BuildInfo
             {
                 BuildNumber = EmailObj.GetBuildNumber(),
-                DataBaseFileDate = EmailObj.GetDatabaseDate(),
+                DatabaseFileDate = EmailObj.GetDatabaseDate(),
                 DatabaseExpirationDate = EmailObj.GetDatabaseExpirationDate()
             };
         }
 
+        /// <summary>
+        /// Set options for email verification.
+        /// </summary>
         public void SetOptions(EmailOptions options)
         {
             EmailObj.SetCacheUse(options.UseCache ? 1 : 0);
@@ -90,6 +96,9 @@ namespace OpenMelissa
             };
         }
 
+        /// <summary>
+        /// Verfiy an email address.
+        /// </summary>
         public ValidationResponse<ValidatedEmailAddress> VerifyEmail(EmailAddress emailAddress)
         {
             var toReturn = new ValidationResponse<ValidatedEmailAddress>

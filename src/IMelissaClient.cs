@@ -7,9 +7,13 @@ namespace OpenMelissa
     {
         AddressObject AddressObject { get; }
         ParseObject ParseObject { get; }
+        EmailObject EmailObject { get; }
+
         ValidationResponse<ValidatedAddress> ValidateAddress(Address address);
         ParsedResult ParseUSAddress(Address address);
         ParsedResult ParseCanadianAddress(Address address);
         ValidationResponse<ValidatedEmailAddress> ValidateEmailAddress(EmailAddress emailAddress);
+
+        void ResetObjects();
     }
 }

@@ -1,9 +1,4 @@
-﻿using OpenMelissa;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OpenMelissa.Configuration
+﻿namespace OpenMelissa.Configuration
 {
     public sealed class EmailOptions
     {
@@ -78,7 +73,7 @@ namespace OpenMelissa.Configuration
         public bool UpdateDomain { get; set; } = true;
 
         /// <summary>
-        /// Default options.
+        /// Default options as per Melissa docs.
         /// </summary>
         public static EmailOptions Default
             => new EmailOptions
